@@ -31,6 +31,18 @@
 #define HIST_MAX    4096
 
 extern char **environ;
+/**
+ * struct liststr - singly linked list
+ * @num: the number field
+ * @str: a string
+ * @next: points to the next node
+ */
+typedef struct liststr
+{
+	int num;
+	char *str;
+	struct liststr *next;
+} list_t;
 
 /**
  * struct passinfo - contains pseudo-arguments to pass into a function,
